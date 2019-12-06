@@ -9,6 +9,10 @@ class ApplicationController < Sinatra::Base
   erb :new
   end
   
+   get '/recipes/new' do #loads new form
+    erb :new
+  end
+  
     get '/recipes' do #loads index page
     @recipes = Recipe.all
     erb :index
